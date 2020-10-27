@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HenryRojasexamen.Pages.LoginPage">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="70" />
+            <RowDefinition Height="60" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Image HeightRequest="100" WidthRequest="100" Grid.Column="0" Grid.Row="0"
+               Source="https://sbsconsulting.com.ec/wp-content/uploads/2018/01/LOGO-UISRAEL-768x209.png" />
+        <StackLayout Grid.Column="0" Grid.Row="1" >
+            <Label Text="Usuario:" />
+            <Entry x:Name="txtuser" Text=""></Entry>
+        </StackLayout>
+        
+        <StackLayout Grid.Column="0" Grid.Row="2" >
+            <Label Text="Constraseña:" />
+            <Entry x:Name="txtclave" IsPassword="True" Text=""></Entry>
+        </StackLayout>
+
+        <Button x:Name="btniniciar" Grid.Column="0" Grid.Row="3"  Text="Iniciar Sesión" BackgroundColor="#2279cf" TextColor="White" Clicked="btniniciar_Clicked" />
+
+    </Grid>
+</ContentPage>

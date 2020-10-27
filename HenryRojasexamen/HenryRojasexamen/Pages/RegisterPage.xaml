@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="HenryRojasexamen.Pages.RegisterPage">
+    <StackLayout>
+        <Frame BackgroundColor="#2279cf" Grid.Column="0" Grid.Row="1">
+            <Label x:Name="txtuseractual" Text="Usuario conectado: " TextColor="White"></Label>
+        </Frame>
+        <Grid Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="70" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0" Grid.Row="0" >
+                <Label Text="Nombre:" />
+                <Entry x:Name="txtunombre" Text=""></Entry>
+            </StackLayout>
+        
+            <StackLayout Grid.Column="0" Grid.Row="1" >
+                <Label Text="Monto inicial:" />
+                <Entry x:Name="txtmontoi" Text="" Keyboard="Numeric"></Entry>
+            </StackLayout>
+        
+            <StackLayout Grid.Column="0" Grid.Row="2"  Orientation="Horizontal">
+                <StackLayout HorizontalOptions="FillAndExpand">
+                    <Label Text="Pago mensual:" />
+                    <Entry x:Name="txtpagom" Text="" IsReadOnly="True" ></Entry>
+                </StackLayout>
+                 <Button x:Name="btncalcular" Text="Calcular" BackgroundColor="#2279cf" TextColor="White" Clicked="btncalcular_Clicked"></Button>
+            </StackLayout>
+
+            <Button x:Name="btnguardar" Grid.Column="0" Grid.Row="3" Margin="0,100,0,0" Text="Guardar" BackgroundColor="#2279cf" TextColor="White" Clicked="btnguardar_Clicked" />
+
+        </Grid>
+    </StackLayout>
+    
+</ContentPage>
